@@ -1,1 +1,36 @@
-cl
+package day1;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Student s1=new Student(1,"Rahul",100); // we created an object then assigned the value inside that 
+		// now it creates an constructor student and it will have those values 
+		Student s2=new Student(2,"Ranbir",98);
+		s1.display();
+		s2.display();
+	}
+
+}
+
+class Student { // this is know as class a blueprint of a code it is used when we need to create our own data type like student whicl
+	// can store roll name and mark 
+	int roll;
+	String name;
+	int mark;
+	Student(int roll,String name,int mark) // this is constructor it is called default when an object is created
+	// this is parameterized constructor we passed the value inside the constructor and it is the easy way to enter input when there are many student
+	// 
+	{
+		this.roll=roll; // in this line "this" denotes the s1 and when another variable is s2 it refers to s2 this represents the current object  
+		this.name=name;
+		this.mark=mark;
+	}
+	void display() // just a normal function to return the value
+	{
+		System.out.println("name is:"+this.name); // same here in this "this" denotes s1 first then print it then s2
+		System.out.println("roll is:"+this.roll);
+		System.out.println("mark is:"+this.mark);
+	}
+}
+
