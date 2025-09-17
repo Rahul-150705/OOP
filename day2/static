@@ -1,0 +1,24 @@
+package day1;
+class stat{
+	static final double pi=3.14; // when used we will use the same pi for all the object will have more pi so memory will increase
+	int radius;
+	stat(int radius)
+	{
+		this.radius=radius;
+	}
+	double display() {
+		return radius*radius*pi;
+}
+}
+
+public class staticc {
+
+	public static void main(String[] args) {
+		stat s1=new stat(5);
+		System.out.println("Area Is:"+ s1.display());
+		
+		
+
+	}
+
+}
